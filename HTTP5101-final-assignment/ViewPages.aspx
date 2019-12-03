@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="viewpage.aspx.cs" Inherits="HTTP5101_final_assignment.WebForm3" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewPages.aspx.cs" Inherits="HTTP5101_final_assignment.WebForm3" %>
 
 <asp:Content ID="page_view" ContentPlaceHolderID="body" runat="server">
 <head runat="server">

@@ -124,10 +124,11 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="userpages.ascx" />
-    <Content Include="addpage.aspx" />
-    <Content Include="editpages.aspx" />
-    <Content Include="viewpage.aspx" />
+    <Content Include="ListPages.ascx" />
+    <Content Include="AddPages.aspx" />
+    <Content Include="EditPages.aspx" />
+    <Content Include="ViewPages.aspx" />
+    <Content Include="ListPages.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -190,6 +191,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="layout.Master.cs">
+      <DependentUpon>layout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layout.Master.designer.cs">
+      <DependentUpon>layout.Master</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,33 +205,40 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="userpages.ascx.cs">
-      <DependentUpon>userpages.ascx</DependentUpon>
+    <Compile Include="ListPages.ascx.cs">
+      <DependentUpon>ListPages.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="userpages.ascx.designer.cs">
-      <DependentUpon>userpages.ascx</DependentUpon>
+    <Compile Include="ListPages.ascx.designer.cs">
+      <DependentUpon>ListPages.ascx</DependentUpon>
     </Compile>
-    <Compile Include="addpage.aspx.cs">
-      <DependentUpon>addpage.aspx</DependentUpon>
+    <Compile Include="AddPages.aspx.cs">
+      <DependentUpon>AddPages.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="addpage.aspx.designer.cs">
-      <DependentUpon>addpage.aspx</DependentUpon>
+    <Compile Include="AddPages.aspx.designer.cs">
+      <DependentUpon>AddPages.aspx</DependentUpon>
     </Compile>
-    <Compile Include="editpages.aspx.cs">
-      <DependentUpon>editpages.aspx</DependentUpon>
+    <Compile Include="EditPages.aspx.cs">
+      <DependentUpon>EditPages.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="editpages.aspx.designer.cs">
-      <DependentUpon>editpages.aspx</DependentUpon>
+    <Compile Include="EditPages.aspx.designer.cs">
+      <DependentUpon>EditPages.aspx</DependentUpon>
     </Compile>
-    <Compile Include="viewpage.aspx.cs">
-      <DependentUpon>viewpage.aspx</DependentUpon>
+    <Compile Include="ViewPages.aspx.cs">
+      <DependentUpon>ViewPages.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="viewpage.aspx.designer.cs">
-      <DependentUpon>viewpage.aspx</DependentUpon>
+    <Compile Include="ViewPages.aspx.designer.cs">
+      <DependentUpon>ViewPages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListPages.aspx.cs">
+      <DependentUpon>ListPages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListPages.aspx.designer.cs">
+      <DependentUpon>ListPages.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -233,6 +248,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="layout.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -21,7 +21,7 @@ namespace HTTP5101_final_assignment
 
             foreach (Dictionary<string, string> row in ds)
             {
-                blog_pages.InnerHtml += row["page_name"] + "<br>";
+                  blog_pages.InnerHtml += row["page_name"] + "<br>";
             }
         }
 

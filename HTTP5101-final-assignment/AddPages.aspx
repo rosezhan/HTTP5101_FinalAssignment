@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="addpage.aspx.cs" Inherits="HTTP5101_final_assignment.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddPages.aspx.cs" Inherits="HTTP5101_final_assignment.WebForm1" %>
 <asp:Content ID="newpage" ContentPlaceHolderID="body" runat="server">
 <head runat="server">
     <title>Add a New Page</title>
-</head>
+</head>s
 <body>
     <h1>Add New Entry</h1>
     <form id="form1" runat="server">

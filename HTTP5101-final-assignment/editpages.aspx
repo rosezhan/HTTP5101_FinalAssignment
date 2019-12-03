@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="editpages.aspx.cs" Inherits="HTTP5101_final_assignment.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditPages.aspx.cs" Inherits="HTTP5101_final_assignment.WebForm2" %>
 <asp:Content ID="updatepage" ContentPlaceHolderID="body" runat="server">
     <div>
         <div class="viewnav">
