@@ -24,21 +24,21 @@ namespace HTTP5101_final_assignment
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// blog_title control.
+        /// page_title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox blog_title;
+        protected global::System.Web.UI.WebControls.TextBox page_title;
 
         /// <summary>
-        /// blog_content control.
+        /// page_content control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox blog_content;
+        protected global::System.Web.UI.WebControls.TextBox page_content;
     }
 }

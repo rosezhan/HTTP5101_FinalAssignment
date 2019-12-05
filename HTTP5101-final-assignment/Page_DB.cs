@@ -6,6 +6,8 @@ using System.Globalization;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
 
+//code referenced from in-class example, made by Christine Bittle.
+
 namespace HTTP5101_final_assignment
 {
     public class Page_DB
@@ -26,16 +28,32 @@ namespace HTTP5101_final_assignment
                     + "; port = " + Port
                     + "; password = " + Password;
             }
-        }
-        public List<Dictionary<String, String>> QueryList(string query)
-        {
+        }  
+        //The QueryList is indeed referenced elsewhere, but perhaps I'm not using it in the right way. 
+        //public List<Dictionary<String, String>> QueryList(string query)
+        
+        //{
             MySqlConnection Connect = new MySqlConnection(ConnectionString);
             List<Dictionary<String, String>> ResultSet = new List<Dictionary<String, String>>();
         }
-        public void AddPage(Pages new_page)
+
+        /*/This section is for showing page info, as referenced in a previous file.
+        ///To be honest, I'm not sure where the problem lies.
+        //As I have yet to even figure out this one problem with the QueryList, I have not moved on.
+        //I think the problem lies not in the code itself but perhaps in something that I do not yet understand.
+        public void ShowPageInfo(CRUDpages list_pages)
+        {
+            string query = "select page_name, page_body from pages";
+            query = String.Format(query, list_pages.GetName(), list_pages.GetBody());
+
+            MySqlConnection Connect = new MySqlConnection(ConnectionString);
+            MySqlCommand cmd = new MySqlCommand(query, Connect);
+        }*/
+        /*
+        public void AddPage(CRUDpages new_page)
         {
             string query = "insert into pages(page_name, page_body) values ('{0}','{1})";
-            query = String.Format(query, new_page.Getname(), new_page.Getbody());
+            query = String.Format(query, new_page.GetName(), new_page.GetBody());
 
             MySqlConnection Connect = new MySqlConnection(ConnectionString);
             MySqlCommand cmd = new MySqlCommand(query, Connect);
@@ -55,7 +73,7 @@ namespace HTTP5101_final_assignment
         }
 
 
-        public void UpdatePage(int page_number, Pages new_page)
+        /*public void UpdatePage(int page_number, Pages new_page)
         {
             string query = "update pages set page_name='{0}', page_body='{1}'";
             query = String.Format(query, new_page.Getname(), new_page.Getbody())
@@ -97,8 +115,8 @@ namespace HTTP5101_final_assignment
             }
 
             Connect.Close();
-        }
+        }*/
     }
-}
+//}
 
        

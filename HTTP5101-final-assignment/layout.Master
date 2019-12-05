@@ -4,16 +4,23 @@
 
 <html>
 <head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <title>Layout Master</title>
+    <link rel="stylesheet" type="text/css" href="Pages.css" />
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-    </form>
+    <header>
+        <h2>My Blog</h2>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="homepage.aspx">Home</a></li>
+                <li><a href="ListPages.aspx">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <footer>
+        <p>&copy; Rose Zhan 2018</p>
+    </footer>
 </body>
 </html>

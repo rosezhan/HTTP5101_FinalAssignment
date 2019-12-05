@@ -1,0 +1,21 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans|Shadows+Into+Light&display=swap');
+
+html {
+    box-sizing:border-box;
+}
+
+*, *::before, *::after {
+    box-sizing:inherit;
+}
+
+header h2 {
+   color:teal;
+   font-family:"Shadows Into Light", cursive;
+}
+
+#main-nav {
+    float:right;
+    display:inline-block;
+    font-family:"Open Sans", sans-serif;
+}
+

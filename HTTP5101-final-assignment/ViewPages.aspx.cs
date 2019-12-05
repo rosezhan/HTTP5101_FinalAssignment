@@ -11,10 +11,12 @@ namespace HTTP5101_final_assignment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //I created a ShowPageInfo in the database class, that didn't solve the issue.
+            //I'm not sure what else is missing, but perhaps it's something in the Page_DB class.
             Page_DB db = new Page_DB();
-            ShowPageInfo(db);
+            ShowPageInfo (db);
         }
-        protected void DeletePage(object sender, EventArgs e)
+        /*protected void DeletePage(object sender, EventArgs e)
         {
             bool valid = true;
             string page_number = Request.QueryString["page_number"];
@@ -28,7 +30,7 @@ namespace HTTP5101_final_assignment
                 Response.Redirect("userpages.aspx");
             }
 
-        protected void ShowPageInfo(Page_DB db)
+        /*protected void ShowPageInfo(Page_DB db)
         {
                 bool valid = true;
                 string page_number = Request.QueryString["page_number"];
@@ -36,15 +38,11 @@ namespace HTTP5101_final_assignment
 
                 if (valid)
                 {
+                    CRUDpages page_record = db.FindPage(Int32.Parse(page_number));
 
-                    Student student_record = db.FindStudent(Int32.Parse(studentid));
 
-
-                    student_title_fname.InnerHtml = student_record.GetFname() + " " + student_record.GetLname();
-                    student_fname.InnerHtml = student_record.GetFname();
-                    student_lname.InnerHtml = student_record.GetLname();
-                    student_number.InnerHtml = student_record.GetNumber();
-                    enrolment_date.InnerHtml = student_record.GetEnrolDate().ToString("yyyy-M-dd");
+                    page_title.InnerHtml = CRUDpages.GetName();
+                    page_content.InnerHtml = CRUDpages.GetBody();
                 }
                 else
                 {
@@ -54,9 +52,9 @@ namespace HTTP5101_final_assignment
 
                 if (!valid)
                 {
-                    student.InnerHtml = "There was an error finding that student.";
+                    page_title.InnerHtml = "There was an error finding that student.";
                 }
             }
-        }
+        }*/
     }
 }

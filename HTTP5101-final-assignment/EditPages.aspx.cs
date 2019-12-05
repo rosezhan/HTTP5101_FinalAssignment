@@ -18,28 +18,25 @@ namespace HTTP5101_final_assignment
             }
         }
 
-        protected void Update_Student(object sender, EventArgs e)
+        protected void Update_Page(object sender, EventArgs e)
         {
 
-            //this connection instance is for editing data
-            SCHOOLDB db = new SCHOOLDB();
+            Page_DB db = new Page_DB();
 
             bool valid = true;
-            string studentid = Request.QueryString["studentid"];
-            if (String.IsNullOrEmpty(studentid)) valid = false;
+            string page_number = Request.QueryString["page_number"];
+            if (String.IsNullOrEmpty(page_number)) valid = false;
             if (valid)
             {
-                Student new_student = new Student();
-                //set that student data
-                new_student.SetFname(student_fname.Text);
-                new_student.SetLname(student_lname.Text);
-                new_student.SetNumber(student_number.Text);
+                CRUDpages new_page = new CRUDpages();
+             
+                new_page.SetName(page_title.Text);
+                new_page.SetBody(page_content.Text);
 
-                //add the student to the database
                 try
                 {
-                    db.UpdateStudent(Int32.Parse(studentid), new_student);
-                    Response.Redirect("ShowStudent.aspx?studentid=" + studentid);
+                    db.UpdatePage(Int32.Parse(page_number), new_page);
+                    Response.Redirect("ShowPage.aspx?page_number=" + page_number);
                 }
                 catch
                 {
@@ -50,36 +47,31 @@ namespace HTTP5101_final_assignment
 
             if (!valid)
             {
-                student.InnerHtml = "There was an error updating that student.";
+                page_title.InnerHtml = "There was an error updating that student.";
             }
 
         }
 
-        protected void ShowStudentInfo(SCHOOLDB db)
+        protected void ShowPageInfo(Page_DB db)
         {
 
             bool valid = true;
-            string studentid = Request.QueryString["studentid"];
-            if (String.IsNullOrEmpty(studentid)) valid = false;
+            string page_number = Request.QueryString["page_number"];
+            if (String.IsNullOrEmpty(page_number)) valid = false;
 
-            //We will attempt to get the record we need
             if (valid)
             {
 
-                Student student_record = db.FindStudent(Int32.Parse(studentid));
-                student_title.InnerHtml = student_record.GetFname() + " " + student_record.GetLname();
-                student_fname.Text = student_record.GetFname();
-                student_lname.Text = student_record.GetLname();
-                student_number.Text = student_record.GetNumber();
+                CRUDpages page_record = db.FindPage(Int32.Parse(page_number));
+                page_title.InnerHtml = CRUDpages.GetName();
+                page_body.Text = CRUDpages.GetBody();
             }
 
             if (!valid)
             {
-                student.InnerHtml = "There was an error finding that student.";
+                page_title.InnerHtml = "There was an error finding that page.";
             }
         }
     }
 }
-        }
-    }
-}
+    
